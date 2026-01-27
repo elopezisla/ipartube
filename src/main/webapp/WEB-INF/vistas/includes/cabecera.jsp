@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c"%>
 <!DOCTYPE html>
-<html class="h-100">
+<html class="h-100" lang="es">
 <head>
 <base href="${pageContext.request.contextPath}/cf/">
 <meta charset="UTF-8">
