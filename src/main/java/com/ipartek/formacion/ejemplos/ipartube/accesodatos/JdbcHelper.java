@@ -1,4 +1,4 @@
-package com.ipartek.formacion.ejemplos.accesodatos;
+package com.ipartek.formacion.ejemplos.ipartube.accesodatos;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
