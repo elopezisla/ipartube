@@ -9,7 +9,7 @@ public class JdbcHelper {
 	public static PreparedStatement prepararSql(String sql) throws Exception {
 		String url = "jdbc:mysql://localhost:3306/ipartube";
 		String user = "root";
-		String pass = "1234";
+		String pass = "12345";
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
