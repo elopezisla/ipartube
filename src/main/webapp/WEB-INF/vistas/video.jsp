@@ -7,16 +7,15 @@
 		<div class="card mb-3">
 			<div class="ratio ratio-16x9 card-img-top">
 				<iframe class="card-img-top"
-					src="https://www.youtube.com/embed/xb50ooBETEc?si=38vrolrMa8AQCEhN"
+					src="${video.videoUrl}"
 					title="YouTube video player" 
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 			</div>
 			<div class="card-body">
-				<h5 class="card-title">ANGELUS APATRIDA - Cold</h5>
-				<p class="card-text">Taken from the ANGELUS APATRIDA album
-					“Aftermath”, out October 20th, 2023.</p>
-				<small class="text-body-secondary">21/01/2026 9:06</small>
+				<h5 class="card-title">${video.titulo}</h5>
+				<p class="card-text">${video.descripcion}</p>
+				<small class="text-body-secondary">${video.fecha}</small>
 			</div>
 
 
