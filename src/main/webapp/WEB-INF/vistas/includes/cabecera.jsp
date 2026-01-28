@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c"%>
+<%@ taglib uri="http://sargue.net/jsptags/time" prefix="javatime" %>
 <!DOCTYPE html>
 <html class="h-100" lang="es">
 <head>
@@ -13,10 +14,12 @@
 	rel="stylesheet"
 	integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
 	crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body class="h-100 d-flex flex-column">
-	<nav class="sticky-top navbar navbar-expand-sm bg-dark" data-bs-theme="dark">
+	<nav class="sticky-top navbar navbar-expand-sm bg-dark"
+		data-bs-theme="dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="index">IparTube</a>
 			<button class="navbar-toggler" type="button"
@@ -30,12 +33,25 @@
 					<li class="nav-item"><a class="nav-link" href="index">Principal</a></li>
 				</ul>
 				<ul class="navbar-nav mb-2 mb-sm-0">
-					<li class="nav-item"><a class="nav-link" href="admin/index">Administración</a></li>
+					<c:if test="${sessionScope.usuario != null}">
+						<c:if
+							test="${sessionScope.usuario.rol.nombre == 'ADMINISTRADOR' }">
+							<li class="nav-item"><a class="nav-link" href="admin/index">Administración</a></li>
+						</c:if>
+						
+						<li class="navbar-text">${sessionScope.usuario.nombre}</li>
+						<li class="nav-item"><a class="nav-link" href="logout">Cerrar
+								sesión</a></li>
+					</c:if>
+					<c:if test="${sessionScope.usuario == null}">
+						<li class="nav-item"><a class="nav-link" href="login">Iniciar
+								sesión</a></li>
+					</c:if>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	
+
 	<div></div>
-	
+
 	<%="<main class='container flex-grow-1 my-5'>"%>
