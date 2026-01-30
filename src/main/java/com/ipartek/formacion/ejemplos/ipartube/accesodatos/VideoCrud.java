@@ -11,6 +11,7 @@ import com.ipartek.formacion.ejemplos.ipartube.modelos.Usuario;
 import com.ipartek.formacion.ejemplos.ipartube.modelos.Video;
 
 public class VideoCrud {
+	
 	private static final String SQL_SELECT = """
 			SELECT
 			    v.id AS v_id,
